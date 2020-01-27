@@ -1,0 +1,8 @@
+#!/usr/nim/env node 
+
+const app = require('../app') ; 
+
+// starting the server by listening the server .. 
+const port = 3000 ; 
+
+app.listen(port, () => console.log(`Listeing to the ${port}`));
