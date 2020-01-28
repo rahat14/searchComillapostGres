@@ -3,7 +3,11 @@ const bodyParser=require('body-parser') ;
 const allstoresfun = require('./routes/allstores') ; 
 const createStore = require('./routes/createstores'); 
 const uploadApp = require('./routes/upload_image') ; 
+var cors = require('cors')
+
+
 const app = express() ; 
+app.use(cors())
 
 app.use(express.static('public'));
 app.use('/images', express.static(__dirname + '/images'));
